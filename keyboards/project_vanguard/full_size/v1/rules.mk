@@ -5,7 +5,10 @@ ARCH = AVR8
 F_CPU = 8000000
 F_USB = $(F_CPU)
 
-BOOTLOADER = qmk-dfu
+# Bootloader selection
+#BOOTLOADER = atmel-dfu
+#BOOTLOADER = qmk-dfu
+#BOOTLOADER = lufa-dfu
 
 # Build options.
 EXTRAKEY_ENABLE = yes

@@ -1,13 +1,38 @@
+// Reference: https://github.com/qmk/qmk_firmware/blob/master/docs/reference_info_json.md
+
 {
+	/*
+    I saw this somewhere:
+    
+    "features": {
+            "bootmagic": false,
+            "command": false,
+            "console": false,
+            "extrakey": true,
+            "mousekey": false,
+            "nkro": true
+        },
+    
+    Should we remove the corresponding configurations from the config.h file and place them in the JSON here? See other keyboards for examples.
+    */
+
     "manufacturer": "Maxwell Jacob",
     "keyboard_name": "Project Vanguard",
     "maintainer": "Maxwell Jacob",
     "_invalid": {
         "unused_pins": "{ E2, E6}"
     },
+    /*
+    Bootloader options:
+    * "qmk-dfu"
+    * "atmel-dfu"
+    * "lufa-dfu".
+    */
+    "bootloader": "qmk-dfu",
     "bootmagic": {
         "enabled": false
     },
+    // Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed.
     "debounce": 5,
     "diode_direction": "COL2ROW",
     "indicators": {
@@ -19,15 +44,18 @@
         "enabled": false
     },
     "processor": "atmega32u4",
+    // Enable a blinking light on the specified pin when in bootloader mode. NOTE: This only works for the QMK bootloader.
     "qmk_lufa_bootloader": {
         "led": "D3"
     },
     "url": "",
+    // TODO: Consider buying a vendor and product ID.
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x0000",
         "vid": "0xFEED"
     },
+    // TODO: Ask online. What do the "layouts" represent? Is this where I place the matrix configuration?
     "layouts": {
         "LAYOUT": {
             "layout": [

@@ -22,12 +22,6 @@
     "_invalid": {
         "unused_pins": "{ E2, E6}"
     },
-    /*
-    Bootloader options:
-    * "qmk-dfu"
-    * "atmel-dfu"
-    * "lufa-dfu".
-    */
     "bootloader": "qmk-dfu",
     "bootmagic": {
         "enabled": false
